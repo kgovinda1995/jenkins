@@ -1,0 +1,8 @@
+pipeline{
+    stages{
+        stage ('Git clone' ){
+            gitclone "https://github.com/kgovinda1995/jenkins.git"
+
+        }
+    }
+}
