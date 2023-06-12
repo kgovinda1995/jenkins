@@ -4,5 +4,8 @@ pipeline{
             gitclone "https://github.com/kgovinda1995/jenkins.git"
 
         }
+        stage ('Maven build') {
+            sh 'mvn clean install'
+        }       
     }
 }
