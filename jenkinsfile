@@ -1,11 +1,10 @@
 pipeline{
     stages{
-        stage ('Git clone' ){
-           steps{
-                 
-              git 'https://github.com/kgovinda1995/jenkins.git'
+        stage('GetCode'){
+            steps{
+                git 'https://github.com/kgovinda1995/jenkins.git'
             }
-         }
+         } 
         stage ('Maven build') {
             steps {
             sh 'mvn clean install'
