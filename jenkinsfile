@@ -1,7 +1,7 @@
 pipeline{
     stages{
         stage ('Git clone' ){
-            gitclone "https://github.com/kgovinda1995/jenkins.git"
+           sh "git clone https://github.com/kgovinda1995/jenkins.git"
 
         }
         stage ('Maven build') {
