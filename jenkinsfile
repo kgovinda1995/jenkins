@@ -5,9 +5,17 @@ pipeline{
             steps{
                 git 'https://github.com/kgovinda1995/jenkins.git'
             }
+<<<<<<< HEAD
             stage('maven build')
             {
                 sh 'mvn clean install'
+=======
+         } 
+         
+        stage ('Maven build') {
+            steps {
+            sh 'mvn --version'
+>>>>>>> 3622960457447e3de631afa0bd0e806b9fe23b08
             }
         }
     }
