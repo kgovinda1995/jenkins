@@ -6,9 +6,7 @@ pipeline{
                 git 'https://github.com/kgovinda1995/jenkins.git'
             }
          } 
-         agent{
-            label 'node-1'
-         }
+         
         stage ('Maven build') {
             steps {
             sh 'mvn clean install'
