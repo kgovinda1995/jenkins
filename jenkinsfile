@@ -1,19 +1,21 @@
 pipeline{
-   agent any
+    agent any
     stages{
-        stage('GetCode'){
+        stage('git clone'){
             steps{
                 git 'https://github.com/kgovinda1995/jenkins.git'
             }
-         } 
-         agent{
-            label 'maven'
-         }
-        stage ('Maven build') {
-            steps {
-            sh 'mvn clean install'
+            stage('maven build')
+            {
+                sh 'mvn clean install'
             }
-            
-        }       
+        }
     }
 }
+
+
+
+
+
+
+ 
