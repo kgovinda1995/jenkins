@@ -7,7 +7,7 @@ pipeline{
             }
          } 
          agent{
-            label 'maven'
+            label 'node-1'
          }
         stage ('Maven build') {
             steps {
